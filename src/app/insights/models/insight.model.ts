@@ -1,5 +1,5 @@
 export interface Insight {
-    id: string;
+    id?: string;
     category: 'ancestry' | 'health' | 'traits' | 'nutrition';
     title: string;
     description: string;
