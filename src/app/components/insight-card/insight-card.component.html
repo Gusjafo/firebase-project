@@ -1,6 +1,13 @@
-<div class="rounded-xl p-4 shadow-md bg-white border">
-    <h3 class="text-lg font-bold mb-2">{{ insight.title }}</h3>
-    <p class="text-sm text-gray-600">{{ insight.description }}</p>
-    <div class="mt-2 font-mono text-xl">{{ insight.value }}</div>
-  </div>
-  
+<div class="bg-white border-l-4 rounded-xl shadow p-4 hover:shadow-lg transition-all"
+    [ngStyle]="{ 'borderColor': color }">
+    <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-2">
+            <mat-icon class="text-xl" [style.color]="color">{{ icon }}</mat-icon>
+            <span class="font-semibold text-gray-700 text-sm uppercase">{{ insight.category }}</span>
+        </div>
+        <span class="text-sm text-gray-500 italic">{{ insight.type }}</span>
+    </div>
+    <h2 class="text-xl font-bold text-gray-900 mb-1">{{ insight.title }}</h2>
+    <p class="text-gray-600 text-sm mb-3">{{ insight.description }}</p>
+    <div class="text-2xl font-mono text-right" [style.color]="color">{{ insight.value }}</div>
+</div>

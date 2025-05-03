@@ -18,9 +18,5 @@ export class GeneticInsightsComponent implements OnInit {
 
     ngOnInit() {
         this.insights$ = this.insightsService.getInsights();
-
-        this.insightsService.getInsights().subscribe(data => {
-            console.log('Datos recibidos desde Firestore:', data);
-        });
     }
 }
